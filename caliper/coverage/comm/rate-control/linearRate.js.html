@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for comm/rate-control/linearRate.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">comm/rate-control</a> linearRate.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/15</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+&nbsp;
+'use strict';
+&nbsp;
+const RateInterface = <span class="cstat-no" title="statement not covered" >require('./rateInterface.js');</span>
+const util = <span class="cstat-no" title="statement not covered" >require('../util');</span>
+&nbsp;
+/**
+ * Rate controller for generating a linearly changing workload.
+ *
+ * @property {Blockchain} blockchain The initialized blockchain object.
+ * @property {object} options The user-supplied options for the controller.
+ * @property {number} startingSleepTime The sleep time for the first transaction in milliseconds.
+ * @property {number} gradient The gradient of the line.
+ */
+class LinearRateController extends RateInterface{
+    /**
+     * Creates a new instance of the {LinearRateController} class.
+     * @constructor
+     * @param {Blockchain} blockchain The initialized blockchain object.
+     * @param {object} opts Options for the rate controller.
+     */
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(blockchain, opts) {
+<span class="cstat-no" title="statement not covered" >        super(blockchain, opts);</span>
+    }
+&nbsp;
+    /**
+     * Initializes the rate controller.
+     *
+     * @param {object} msg Client options with adjusted per-client load settings.
+     * @param {string} msg.type The type of the message. Currently always 'test'
+     * @param {string} msg.label The label of the round.
+     * @param {object} msg.rateControl The rate control to use for the round.
+     * @param {number} msg.trim The number/seconds of transactions to trim from the results.
+     * @param {object} msg.args The user supplied arguments for the round.
+     * @param {string} msg.cb The path of the user's callback module.
+     * @param {string} msg.config The path of the network's configuration file.
+     * @param {number} msg.numb The number of transactions to generate during the round.
+     * @param {number} msg.txDuration The length of the round in SECONDS.
+     * @param {number} msg.totalClients The number of clients executing the round.
+     * @param {number} msg.clients The number of clients executing the round.
+     * @param {object} msg.clientargs Arguments for the client.
+     * @param {number} msg.clientIdx The 0-based index of the current client.
+     * @param {number} msg.roundIdx The 1-based index of the current round.
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync init(msg) {
+        // distributing TPS among clients
+        let startingTps = <span class="cstat-no" title="statement not covered" >Number(this.options.startingTps) / msg.totalClients;</span>
+        let finishingTps = <span class="cstat-no" title="statement not covered" >Number(this.options.finishingTps) / msg.totalClients;</span>
+<span class="cstat-no" title="statement not covered" >        this.startingSleepTime = 1000 / startingTps;</span>
+        let finishingSleepTime = <span class="cstat-no" title="statement not covered" >1000 / finishingTps;</span>
+&nbsp;
+        // based on linear interpolation between two points with (time/index, sleep time) axes
+        let duration = <span class="cstat-no" title="statement not covered" >msg.numb? msg.numb : msg.txDuration * 1000;</span>
+<span class="cstat-no" title="statement not covered" >        this.gradient = (finishingSleepTime - this.startingSleepTime) / duration;</span>
+&nbsp;
+        // to avoid constant if/else check with the same result
+<span class="cstat-no" title="statement not covered" >        this._interpolate = msg.numb ? this._interpolateFromIndex : this._interpolateFromTime;</span>
+    }
+&nbsp;
+    /**
+     * Perform the rate control by sleeping through the round.
+     * @param {number} start The epoch time at the start of the round (ms precision).
+     * @param {number} idx Sequence number of the current transaction.
+     * @param {object[]} recentResults The list of results of recent transactions.
+     * @return {Promise} A promise that will resolve after the necessary time to keep the defined Tx rate.
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync applyRateControl(start, idx, recentResults) {
+        let currentSleepTime = <span class="cstat-no" title="statement not covered" >this._interpolate(start, idx);</span>
+<span class="cstat-no" title="statement not covered" >        return currentSleepTime &gt; 5 ? util.sleep(currentSleepTime) : Promise.resolve();</span>
+    }
+&nbsp;
+    /**
+     * Interpolates the current sleep time from the transaction index.
+     * @param {number} start The epoch time at the start of the round (ms precision).
+     * @param {number} idx Sequence number of the current transaction.
+     * @return {number} The interpolated sleep time.
+     * @private
+     */
+<span class="fstat-no" title="function not covered" >    _i</span>nterpolateFromIndex(start, idx) {
+<span class="cstat-no" title="statement not covered" >        return this.startingSleepTime + idx * this.gradient;</span>
+    }
+&nbsp;
+    /**
+     * Interpolates the current sleep time from the elapsed time.
+     * @param {number} start The epoch time at the start of the round (ms precision).
+     * @param {number} idx Sequence number of the current transaction.
+     * @return {number} The interpolated sleep time.
+     * @private
+     */
+<span class="fstat-no" title="function not covered" >    _i</span>nterpolateFromTime(start, idx) {
+<span class="cstat-no" title="statement not covered" >        return this.startingSleepTime + (Date.now() - start) * this.gradient;</span>
+    }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = LinearRateController;</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 14:27:05 GMT+0600 (+06)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for comm/rate-control/fixedFeedbackRate.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">comm/rate-control</a> fixedFeedbackRate.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+&nbsp;
+'use strict';
+&nbsp;
+const RateInterface = <span class="cstat-no" title="statement not covered" >require('./rateInterface.js');</span>
+const util = <span class="cstat-no" title="statement not covered" >require('../util');</span>
+&nbsp;
+/**
+ * This controller will send transactions at a specified fixed interval,
+ * but when too many transactions are unfinished, it will sleep a period
+ * of time.
+ */
+class FixedFeedbackRateController extends RateInterface{
+    /**
+     * Constructor
+     * @param {Object} blockchain the blockchain under test
+     * @param {JSON} opts the configuration options
+     */
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(blockchain, opts) {
+<span class="cstat-no" title="statement not covered" >        super(blockchain, opts);</span>
+    }
+&nbsp;
+    /**
+     * Initialise the rate controller with a passed msg object
+     * - Only require the desired TPS from the standard msg options
+     * @param {JSON} msg the initialisation message
+     */
+<span class="fstat-no" title="function not covered" >    in</span>it(msg) {
+        const tps = <span class="cstat-no" title="statement not covered" >this.options.tps;</span>
+        const tpsPerClient = <span class="cstat-no" title="statement not covered" >msg.totalClients ? (tps / msg.totalClients) : tps;</span>
+<span class="cstat-no" title="statement not covered" >        this.sleepTime = (tpsPerClient &gt; 0) ? 1000/tpsPerClient : 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.sleep_time = this.options.sleep_time ? this.options.sleep_time : 100;</span>
+<span class="cstat-no" title="statement not covered" >        this.unfinished_per_client = this.options.unfinished_per_client ? this.options.unfinished_per_client : 7000;</span>
+<span class="cstat-no" title="statement not covered" >        this.zero_succ_count = 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.total_sleep_time = 0;</span>
+    }
+&nbsp;
+    /**
+    * Perform the rate control action based on knowledge of the start time, current index, and current results.Sleep a suitable time
+    * @param {number} start, generation time of the first test transaction
+    * @param {number} idx, sequence number of the current test transaction
+    * @param {Array} currentResults, current result set
+    * @param {Array} resultStats, result status set
+    * @return {promise} the return promise
+    */
+<span class="fstat-no" title="function not covered" >    as</span>ync applyRateControl(start, idx, currentResults, resultStats) {
+<span class="cstat-no" title="statement not covered" >        if(this.sleepTime === 0 || idx &lt; this.unfinished_per_client) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+        let diff = (<span class="cstat-no" title="statement not covered" >this.sleepTime * idx - ((Date.now() - this.total_sleep_time) - start))</span>;
+<span class="cstat-no" title="statement not covered" >        if( diff &gt; 5) {</span>
+<span class="cstat-no" title="statement not covered" >            return await util.sleep(diff);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(resultStats.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+        let stats = <span class="cstat-no" title="statement not covered" >resultStats[0];</span>
+        let unfinished = <span class="cstat-no" title="statement not covered" >idx - (stats.succ + stats.fail);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(unfinished &lt; this.unfinished_per_client / 2) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+        // Determines the sleep time for waiting until
+        // successful transactions occure.
+<span class="cstat-no" title="statement not covered" >        if(resultStats.length &gt; 1 &amp;&amp; resultStats[1].succ === 0) {</span>
+<span class="cstat-no" title="statement not covered" >            this.zero_succ_count++;</span>
+<span class="cstat-no" title="statement not covered" >            for(let i = 30; i &gt; 0; --i) {</span>
+<span class="cstat-no" title="statement not covered" >                if(this.zero_succ_count &gt;= i) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.total_sleep_time += i * this.sleep_time;</span>
+<span class="cstat-no" title="statement not covered" >                    return await util.sleep(i * this.sleep_time);</span>
+                }
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        this.zero_succ_count = 0;</span>
+&nbsp;
+        // Determines the sleep time according to the current number of
+        // unfinished transactions with the configure one.
+<span class="cstat-no" title="statement not covered" >        for(let i = 10; i &gt; 0; --i) {</span>
+<span class="cstat-no" title="statement not covered" >            if(unfinished &gt;= i * this.unfinished_per_client) {</span>
+<span class="cstat-no" title="statement not covered" >                this.total_sleep_time += i * this.sleep_time;</span>
+<span class="cstat-no" title="statement not covered" >                return await util.sleep(i * this.sleep_time);</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = FixedFeedbackRateController;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 14:27:05 GMT+0600 (+06)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

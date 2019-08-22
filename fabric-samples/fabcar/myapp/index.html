@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="mx-auto" style="width: 200px;">
+
+			<div><h2>Fabric Car</h2></div>
+			<br>
+			<div id="userName" class="input-group mb-3">
+				<input type="text" placeholder="Query CAR Key" id="inp">
+			</div>
+			<!-- <nav class="navbar navbar-light bg-light">
+				<form class="form-inline">
+				  <button class="btn btn-outline-success" type="button">Register</button>
+				</form>
+			</nav>  -->
+	
+			<div class="btn-group">
+		    	<button type="button" class="btn btn-primary .mr-2" id="querycar">Query Car</button>
+		    	
+		  	</div>
+
+			  <br><br><br>
+			  <button type="button" class="btn btn-secondary" id="allcars">Query Cars</button>
+
+		  	<br><br>
+
+		  			
+
+		</div>
+		<div id="colour1" class="input-group mb-3">
+			<input type="text" placeholder="colour" id="colour">
+		</div>
+		<div id="make1" class="input-group mb-3">
+			<input type="text" placeholder="make" id="make">
+		</div>
+		<div id="model1" class="input-group mb-3">
+			<input type="text" placeholder="model" id="model">
+		</div>
+		<div id="owner1" class="input-group mb-3">
+			<input type="text" placeholder="owner" id="owner">
+		</div>
+		<div id="key1" class="input-group mb-3">
+			<input type="text" placeholder="key" id="key">
+		</div>
+
+		<button type="button" class="btn btn-primary" id="cnCar">Create New Car</button>
+
+	</div>
+
+
+
+
+
+	  <br><br><br>
+
+	<div>
+	<div id="queryresult"></div>
+	</div>
+	
+
+	<script>
+
+		$(document).ready(function(){
+//allcars
+							$("#allcars").click(function () {
+
+
+				$.ajax({
+
+		url: 'http://localhost:8081/api/query',
+		type: "GET",
+		dataType: 'jsonp',
+
+		success: function(response){
+
+		var display='';
+		var i,cnt;
+		
+		var b=JSON.parse(response.response);
+		
+		for (i = 0; i < b.length; i++) { 
+
+			var temp=JSON.stringify(b[i]);
+			display=display+temp;
+
+						console.log(b[i]);  		
+
+									 }
+
+			$('#queryresult').html(display);
+		
+
+				}
+						});
+
+
+
+});
+
+
+								//query car
+
+												$("#querycar").click(function () {
+													var bb= $("#inp").val();
+
+console.log(bb);
+
+				$.ajax({
+
+		url: 'http://localhost:8081/api/queryCar',
+		type: "GET",
+		data: {"cquery" : bb},
+		dataType: 'jsonp',
+
+		success: function(response){
+			console.log (response.response);
+
+		var display='';
+		var i,cnt;
+		
+			$('#queryresult').html(response.response);
+		//console.log(b.length);
+
+				}
+						});
+
+
+
+});
+
+
+//create car
+$("#cnCar").click(function () {
+
+	var key=$("#key").val();
+	var colour=$('#colour').val();
+	var model=$('#model').val();
+	var owner=$('#owner').val();
+	var make=$('#make').val();
+
+	// console.log(key+model+colour)
+
+			$.ajax({
+
+url: 'http://localhost:8081/api/createCar',
+type: "GET",
+data: {"key" : key, "colour" : colour, "model" : model, "owner" : owner, "make" : make},
+dataType: 'jsonp',
+
+success: function(response){
+	console.log (response.response);
+
+var display='';
+var i,cnt;
+//display=JSON.stringify(response);
+//display=response.toString();
+//for (i = 0; i < display.length; i++) { 
+
+//                   		cnt++;
+
+//                              }
+
+//var b=JSON.parse(response.response.record);
+//str = b.replace(/\\/g, '');
+//console.log(str);
+//display=JSON.parse(str);
+
+//		for (i = 0; i < b.length; i++) { 
+
+//			var temp=JSON.stringify(b[i]);
+//			display=display+temp;
+
+				// console.log(b[i]);  		
+
+							// }
+
+
+	$('#queryresult').html(response.response);
+//console.log(b.length);
+
+		}
+				});
+
+});
+
+// 				$.ajax({
+
+//                    url: 'http://localhost:8080/api/query',
+//                    type: "GET",
+//                       dataType: 'jsonp',
+
+//                   success: function(response){
+// 			var display;
+// 				var i,cnt=0;
+// 				//display=JSON.stringify(response);
+// 					display=response.toString;
+//                       //for (i = 0; i < display.length; i++) { 
+
+//   //                   		cnt++;
+
+// //                              }
+
+
+			
+//                       alert(display);
+
+//                               }
+//                                    });
+
+});
+
+	</script>
+
+</body>
+</html>
+

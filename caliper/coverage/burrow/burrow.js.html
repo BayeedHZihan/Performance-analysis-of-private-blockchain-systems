@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for burrow/burrow.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">burrow</a> burrow.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/52</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Copyright 2017 HUAWEI. All Rights Reserved.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @file, definition of the Burrow class, which implements the Caliper's NBI for Hyperledger Burrow.
+ */
+&nbsp;
+'use strict';
+&nbsp;
+const fs = <span class="cstat-no" title="statement not covered" >require('fs');</span>
+const monax = <span class="cstat-no" title="statement not covered" >require('@monax/burrow');</span>
+const BlockchainInterface = <span class="cstat-no" title="statement not covered" >require('../comm/blockchain-interface.js');</span>
+const util = <span class="cstat-no" title="statement not covered" >require('../comm/util.js');</span>
+const logger = <span class="cstat-no" title="statement not covered" >util.getLogger('burrow.js');</span>
+const TxStatus = <span class="cstat-no" title="statement not covered" >require('../comm/transaction');</span>
+&nbsp;
+/**
+ * Implements {BlockchainInterface} for a Burrow backend.
+ */
+class Burrow extends BlockchainInterface{
+&nbsp;
+    /**
+   * Create a new instance of the {Burrow} class.
+   * @param {string} config_path The path of the Fabric network configuration file.
+   */
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(config_path) {
+<span class="cstat-no" title="statement not covered" >        super(config_path);</span>
+<span class="cstat-no" title="statement not covered" >        this.statusInterval = null;</span>
+    }
+&nbsp;
+    /**
+     * Initialize the {Burrow} object.
+     * @return {time} sleep
+     */
+<span class="fstat-no" title="function not covered" >    in</span>it() {
+<span class="cstat-no" title="statement not covered" >        return util.sleep(2000);</span>
+    }
+&nbsp;
+    /**
+     * Deploy the smart contract specified in the network configuration file.
+     * @return {object} Promise execution for namereg.
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync installSmartContract() {
+        let config  = <span class="cstat-no" title="statement not covered" >require(this.configPath);</span>
+        let grpc = <span class="cstat-no" title="statement not covered" >config.burrow.network.validator.grpc;</span>
+<span class="cstat-no" title="statement not covered" >        if(grpc === null) {</span>
+<span class="cstat-no" title="statement not covered" >            logger.error('Error: Validator url not set.');</span>
+        }
+        let account = <span class="cstat-no" title="statement not covered" >fs.readFileSync(util.resolvePath(config.burrow.network.validator.address)).toString();</span>
+        let options = <span class="cstat-no" title="statement not covered" >{objectReturn: true};</span>
+        let burrow = <span class="cstat-no" title="statement not covered" >monax.createInstance(grpc, account, options);</span>
+        let data = <span class="cstat-no" title="statement not covered" >JSON.parse(fs.readFileSync(util.resolvePath(config.contract.path)).toString());</span>
+        let abi = <span class="cstat-no" title="statement not covered" >data.Abi;</span>
+        let bytecode = <span class="cstat-no" title="statement not covered" >data.Evm.Bytecode.Object;</span>
+&nbsp;
+        const contract = <span class="cstat-no" title="statement not covered" >burrow.contracts.new(abi, bytecode);</span>
+        let contractAddress = <span class="cstat-no" title="statement not covered" >await contract._constructor('');</span>
+<span class="cstat-no" title="statement not covered" >        logger.info(`Contract: ${contractAddress}`);</span>
+&nbsp;
+        // this stores the contract address in a namereg for easy retreival
+        let setPayload = <span class="cstat-no" title="statement not covered" >{</span>
+            Input: {
+                Address: Buffer.from(account,'hex'),
+                Amount: 50000
+            },
+            Name: 'DOUG',
+            Data: contractAddress,
+            Fee: 5000
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return burrow.transact.NameTxSync(setPayload);</span>
+    }
+&nbsp;
+    /**
+     * Return the Burrow context associated with the given callback module name.
+     * @param {string} name The name of the callback module as defined in the configuration files.
+     * @param {object} args Unused.
+     * @return {object} The assembled Burrow context.
+     * @async
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync getContext(name, args) {
+        let config  = <span class="cstat-no" title="statement not covered" >require(this.configPath);</span>
+        let context = <span class="cstat-no" title="statement not covered" >config.burrow.context;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(typeof context === 'undefined') {</span>
+&nbsp;
+            let grpc = <span class="cstat-no" title="statement not covered" >config.burrow.network.validator.grpc;</span>
+<span class="cstat-no" title="statement not covered" >            if(grpc === null) {</span>
+<span class="cstat-no" title="statement not covered" >                logger.error('Error: Validator url not set.');</span>
+            }
+            let account = <span class="cstat-no" title="statement not covered" >fs.readFileSync(util.resolvePath(config.burrow.network.validator.address)).toString();</span>
+&nbsp;
+            // logger.info(`Account: ${account}`);
+            // logger.info(`GRPC: ${grpc}`);
+&nbsp;
+            let options = <span class="cstat-no" title="statement not covered" >{objectReturn: true};</span>
+            let burrow = <span class="cstat-no" title="statement not covered" >monax.createInstance(grpc, account, options);</span>
+&nbsp;
+            // get the contract address from the namereg
+            let address = <span class="cstat-no" title="statement not covered" >(await burrow.query.GetName({Name: 'DOUG'})).Data;</span>
+<span class="cstat-no" title="statement not covered" >            context = {stream: burrow, account: account, address: address};</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return Promise.resolve(context);</span>
+    }
+&nbsp;
+    /**
+     * Release the given Burrow context.
+     * @param {object} context The Burrow context to release.
+     * @async
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync releaseContext(context) {
+        // nothing to do
+    }
+&nbsp;
+    /**
+   * Invoke a smart contract.
+   * @param {Object} context Context object.
+   * @param {String} contractID Identity of the contract.
+   * @param {String} contractVer Version of the contract.
+   * @param {Array} args Array of JSON formatted arguments for multiple transactions.
+   * @param {Number} timeout Request timeout, in seconds.
+   * @return {Promise&lt;object&gt;} The promise for the result of the execution.
+   */
+<span class="fstat-no" title="function not covered" >    as</span>ync invokeSmartContract(context, contractID, contractVer, args, timeout) {
+        let promises = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >        args.forEach(<span class="fstat-no" title="function not covered" >(i</span>tem, index)=&gt;{</span>
+<span class="cstat-no" title="statement not covered" >            promises.push(this.burrowTransaction(context, contractID, contractVer, item, timeout));</span>
+        });
+<span class="cstat-no" title="statement not covered" >        return await Promise.all(promises);</span>
+    }
+&nbsp;
+    /**
+   * Submit a transaction to the burrow daemon with the specified options.
+   * @param {Object} context Context object.
+   * @param {String} contractID Identity of the contract.
+   * @param {String} contractVer Version of the contract.
+   * @param {Array} args Array of JSON formatted arguments for multiple transactions.
+   * @param {Number} timeout Request timeout, in seconds.
+   * @return {Promise&lt;TxStatus&gt;} Result and stats of the transaction invocation.
+   */
+<span class="fstat-no" title="function not covered" >    as</span>ync burrowTransaction(context, contractID, contractVer, args, timeout) {
+        let status = <span class="cstat-no" title="statement not covered" >new TxStatus(args.account);</span>
+<span class="cstat-no" title="statement not covered" >        if(context.engine) {</span>
+<span class="cstat-no" title="statement not covered" >            context.engine.submitCallback(1);</span>
+        }
+&nbsp;
+        let tx = <span class="cstat-no" title="statement not covered" >{</span>
+            Input: {
+                Address: Buffer.from(context.account,'hex'),
+                Amount: args.money
+            },
+            Address: Buffer.from(context.address, 'hex'),
+            GasLimit: 5000,
+            Fee: 5000
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+            let execution = <span class="cstat-no" title="statement not covered" >await context.stream.transact.CallTxSync(tx);</span>
+<span class="cstat-no" title="statement not covered" >            status.SetID(execution.TxHash.toString());</span>
+<span class="cstat-no" title="statement not covered" >            status.SetStatusSuccess();</span>
+        } catch (err) {
+<span class="cstat-no" title="statement not covered" >            status.SetStatusFail();</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return status;</span>
+    }
+&nbsp;
+    /**
+     * Query the given smart contract according to the specified options.
+     * @param {object} context The Burrow context returned by {getContext}.
+     * @param {string} contractID The name of the contract.
+     * @param {string} contractVer The version of the contract.
+     * @param {string} key The argument to pass to the smart contract query.
+     * @param {string} [fcn=query] The contract query function name.
+     * @return {Promise&lt;object&gt;} The promise for the result of the execution.
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync queryState(context, contractID, contractVer, key, fcn = <span class="branch-0 cbranch-no" title="branch not covered" >'query')</span> {
+<span class="cstat-no" title="statement not covered" >        return Promise.resolve();</span>
+    }
+&nbsp;
+    /**
+   * Get adapter specific transaction statistics.
+   * @param {JSON} stats txStatistics object
+   * @param {Array} results array of txStatus objects.
+   */
+<span class="fstat-no" title="function not covered" >    ge</span>tDefaultTxStats(stats, results) {
+        // empty
+    }
+}
+<span class="cstat-no" title="statement not covered" >module.exports = Burrow;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 14:27:05 GMT+0600 (+06)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+2019-01-02T23:42:44+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-01-02T23:42:44+06:00 - ERROR [benchmark/simple/main.js]: file /home/kingbayeed/hyperledger/caliper/benchmark/simple/benchmark/simple/config.yaml does not exist 
+
+2019-01-02T23:43:16+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-01-02T23:43:16+06:00 - ERROR [benchmark/simple/main.js]: file /home/kingbayeed/hyperledger/caliper/benchmark/simple/fabricConfig.yaml does not exist 
+
+2019-01-02T23:43:56+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-01-02T23:43:56+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-01-02T23:43:56+06:00 - ERROR [benchmark/simple/main.js]: Error while executing the benchmark: /home/kingbayeed/hyperledger/caliper/benchmark/simple/fabricConfig.yaml:1
+(function (exports, require, module, __filename, __dirname) { "fabric":
+                                                                      ^
+
+SyntaxError: Unexpected token :
+    at createScript (vm.js:80:10)
+    at Object.runInThisContext (vm.js:139:10)
+    at Module._compile (module.js:616:28)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at new Blockchain (/home/kingbayeed/hyperledger/caliper/src/comm/blockchain.js:19:22) 
+

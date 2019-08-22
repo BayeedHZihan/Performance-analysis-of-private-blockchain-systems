@@ -1,0 +1,36 @@
+2019-02-05T17:55:02+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-05T17:55:02+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-02-05T17:55:04+06:00 - INFO [create-channel.js]: Sleeping 5s... 
+
+2019-02-05T17:55:09+06:00 - INFO [join-channel.js]: Joining channels... 
+
+2019-02-05T17:55:09+06:00 - INFO [install-chaincode.js]: Installing chaincodes... 
+
+2019-02-05T17:55:09+06:00 - INFO [install-chaincode.js]: Installed chaincode fabcar1_1 successfully in all peers 
+
+2019-02-05T17:55:09+06:00 - INFO [instantiate-chaincode.js]: Instantiating chaincodes... 
+
+2019-02-05T17:55:15+06:00 - ERROR [instantiate-chaincode.js]: Failed to instantiate chaincodes: Error: Failed to send instantiate Proposal or receive valid response. Response null or status is not 200.
+    at Object.instantiateChaincode (/home/kingbayeed/hyperledger/caliper/src/fabric/e2eUtils.js:353:19)
+    at <anonymous> 
+
+2019-02-05T17:55:15+06:00 - ERROR [fabric.js]: Fabric chaincode install failed: Error: Failed to send instantiate Proposal or receive valid response. Response null or status is not 200.
+    at Object.instantiateChaincode (/home/kingbayeed/hyperledger/caliper/src/fabric/e2eUtils.js:353:19)
+    at <anonymous> 
+
+2019-02-05T17:55:15+06:00 - ERROR [bench-flow.js]: Error: Error: Failed to send instantiate Proposal or receive valid response. Response null or status is not 200.
+    at Object.instantiateChaincode (/home/kingbayeed/hyperledger/caliper/src/fabric/e2eUtils.js:353:19)
+    at <anonymous> 
+
+2019-02-05T17:55:15+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0 
+
+2019-02-05T17:55:15+06:00 - INFO [bench-flow.js]: 
+        
+#######################################
+# Test summary: 0 succeeded, 0 failed #
+#######################################
+ 
+

@@ -1,0 +1,452 @@
+2019-02-17T16:55:49+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T16:55:50+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-02-17T16:55:50+06:00 - ERROR [benchmark/simple/main.js]: Error while executing the benchmark: Error: Cannot find module '/home/kingbayeed/hyperledger/caliper/network/fabric-v1.2/2org2peercouchdb'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at new Blockchain (/home/kingbayeed/hyperledger/caliper/src/comm/blockchain.js:19:22)
+    at Object.module.exports.run (/home/kingbayeed/hyperledger/caliper/src/comm/bench-flow.js:295:18)
+    at /home/kingbayeed/hyperledger/caliper/benchmark/simple/main.js:78:29
+    at main (/home/kingbayeed/hyperledger/caliper/benchmark/simple/main.js:82:7)
+    at Object.<anonymous> (/home/kingbayeed/hyperledger/caliper/benchmark/simple/main.js:85:1)
+    at Module._compile (module.js:652:30) 
+
+2019-02-17T17:03:14+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T17:03:14+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-02-17T17:03:14+06:00 - ERROR [benchmark/marbles/main.js]: Error while executing the benchmark: Error: Cannot find module '/home/kingbayeed/hyperledger/caliper/network/fabric-v1.2/2org2peercouchdb'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at new Blockchain (/home/kingbayeed/hyperledger/caliper/src/comm/blockchain.js:19:22)
+    at Object.module.exports.run (/home/kingbayeed/hyperledger/caliper/src/comm/bench-flow.js:295:18)
+    at /home/kingbayeed/hyperledger/caliper/benchmark/marbles/main.js:80:29
+    at main (/home/kingbayeed/hyperledger/caliper/benchmark/marbles/main.js:84:7)
+    at Object.<anonymous> (/home/kingbayeed/hyperledger/caliper/benchmark/marbles/main.js:87:1)
+    at Module._compile (module.js:652:30) 
+
+2019-02-17T17:04:50+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T17:04:50+06:00 - ERROR [benchmark/marbles/main.js]: file /home/kingbayeed/hyperledger/caliper/network/fabric-v1.2/2org2peercouchdb/node-json does not exist 
+
+2019-02-17T17:05:12+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T17:05:12+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-02-17T17:05:13+06:00 - INFO [bench-flow.js]: Executing command: docker-compose -f network/fabric-v1.2/2org2peercouchdb/docker-compose.yaml up -d;sleep 3s 
+
+2019-02-17T17:05:37+06:00 - INFO [create-channel.js]: Creating mychannel... 
+
+2019-02-17T17:05:38+06:00 - INFO [create-channel.js]: Created mychannel successfully 
+
+2019-02-17T17:05:38+06:00 - INFO [create-channel.js]: Sleeping 5s... 
+
+2019-02-17T17:05:43+06:00 - INFO [join-channel.js]: Joining channels... 
+
+2019-02-17T17:05:43+06:00 - INFO [join-channel.js]: Joining mychannel... 
+
+2019-02-17T17:05:45+06:00 - INFO [join-channel.js]: Successfully joined peerOrg1's peers to mychannel 
+
+2019-02-17T17:05:46+06:00 - INFO [join-channel.js]: Successfully joined peerOrg2's peers to mychannel 
+
+2019-02-17T17:05:46+06:00 - INFO [join-channel.js]: Successfully joined mychannel 
+
+2019-02-17T17:05:46+06:00 - INFO [install-chaincode.js]: Installing chaincodes... 
+
+2019-02-17T17:05:48+06:00 - INFO [install-chaincode.js]: Installed chaincode marbles successfully in all peers 
+
+2019-02-17T17:05:48+06:00 - INFO [install-chaincode.js]: Installed chaincode simple successfully in all peers 
+
+2019-02-17T17:05:48+06:00 - INFO [instantiate-chaincode.js]: Instantiating chaincodes... 
+
+2019-02-17T17:06:35+06:00 - INFO [e2eUtils.js]: The chaincode instantiate transaction was valid. 
+
+2019-02-17T17:06:35+06:00 - INFO [instantiate-chaincode.js]: Instantiated chaincode marbles successfully 
+
+2019-02-17T17:07:21+06:00 - INFO [e2eUtils.js]: The chaincode instantiate transaction was valid. 
+
+2019-02-17T17:07:21+06:00 - INFO [instantiate-chaincode.js]: Instantiated chaincode simple successfully 
+
+2019-02-17T17:07:21+06:00 - INFO [instantiate-chaincode.js]: Sleeping 5s... 
+
+2019-02-17T17:07:26+06:00 - INFO [bench-flow.js]: Started monitor successfully 
+
+2019-02-17T17:07:26+06:00 - INFO [bench-flow.js]: ###### Testing 'query' ###### 
+
+2019-02-17T17:07:26+06:00 - INFO [bench-flow.js]: ------ Test round 1 ------ 
+
+2019-02-17T17:07:27+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T17:07:27+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T17:07:27+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T17:07:27+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T17:07:27+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-17T17:07:27+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":0}
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":1}
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":2}
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":4}
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":3}
+
+2019-02-17T17:07:27+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:28+06:00 - DEBUG [local-client.js]: Info: client 11755 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:28+06:00 - DEBUG [local-client.js]: Info: client 11760 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:28+06:00 - DEBUG [local-client.js]: Info: client 11766 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:28+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:28+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:28+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:28+06:00 - DEBUG [local-client.js]: Info: client 11771 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:28+06:00 - DEBUG [local-client.js]: Info: client 11778 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:28+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:28+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:28+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 5 Succ: 0 Fail:0 Unfinished:5 
+
+2019-02-17T17:07:29+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 10 Succ: 5 Fail:0 Unfinished:5 
+
+2019-02-17T17:07:30+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 15 Succ: 10 Fail:0 Unfinished:5 
+
+2019-02-17T17:07:31+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 15 Succ: 15 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:32+06:00 - DEBUG [bench-flow.js]: r.create.max: 1550401650.34 r.create.min: 1550401648.302 r.final.max: 1550401651.371 r.final.min: 1550401649.54 
+
+2019-02-17T17:07:32+06:00 - INFO [bench-flow.js]: ###test result:### 
+
+2019-02-17T17:07:32+06:00 - INFO [bench-flow.js]: 
++-------+------+------+-----------+-------------+-------------+-------------+------------+
+| Name  | Succ | Fail | Send Rate | Max Latency | Min Latency | Avg Latency | Throughput |
+|-------|------|------|-----------|-------------|-------------|-------------|------------|
+| query | 15   | 0    | 7.4 tps   | 1.26 s      | 0.98 s      | 1.10 s      | 4.9 tps    |
++-------+------+------+-----------+-------------+-------------+-------------+------------+
+ 
+
+2019-02-17T17:07:32+06:00 - INFO [bench-flow.js]: ### resource stats ### 
+
+2019-02-17T17:07:32+06:00 - INFO [bench-flow.js]: 
++---------+-----------------------------------+-------------+-------------+----------+----------+------------+-------------+-----------+------------+
+| TYPE    | NAME                              | Memory(max) | Memory(avg) | CPU(max) | CPU(avg) | Traffic In | Traffic Out | Disc Read | Disc Write |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Process | node local-client.js(avg)         | 104.4MB     | 104.0MB     | 20.38%   | 8.10%    | -          | -           | -         | -          |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org2.example.co...le-v0 | 46.7MB      | 46.7MB      | 0.00%    | 0.00%    | 203B       | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org1.example.co...le-v0 | 46.2MB      | 46.2MB      | 0.01%    | 0.01%    | 203B       | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org1.example.co...le-v0 | 46.6MB      | 46.6MB      | 0.01%    | 0.00%    | 203B       | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org2.example.co...le-v0 | 46.1MB      | 46.1MB      | 0.01%    | 0.01%    | 203B       | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org2.example.co...es-v1 | 53.6MB      | 50.9MB      | 2.04%    | 1.49%    | 12.3KB     | 5.5KB       | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org1.example.co...es-v1 | 53.9MB      | 51.5MB      | 1.67%    | 1.61%    | 8.3KB      | 3.8KB       | 20.0KB    | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org2.example.co...es-v1 | 53.9MB      | 51.2MB      | 1.79%    | 1.62%    | 8.6KB      | 4.1KB       | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org1.example.co...es-v1 | 56.3MB      | 53.6MB      | 2.00%    | 1.46%    | 12.2KB     | 5.5KB       | 72.0KB    | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | peer1.org1.example.com            | 176.0MB     | 175.7MB     | 4.44%    | 3.61%    | 86.9KB     | 62.8KB      | 0B        | 112.0KB    |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | peer0.org1.example.com            | 196.4MB     | 196.2MB     | 4.89%    | 4.14%    | 95.8KB     | 70.4KB      | 0B        | 112.0KB    |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | peer1.org2.example.com            | 196.8MB     | 196.7MB     | 4.24%    | 3.45%    | 86.9KB     | 62.4KB      | 0B        | 112.0KB    |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | peer0.org2.example.com            | 197.3MB     | 197.1MB     | 4.68%    | 3.87%    | 96.5KB     | 111.4KB     | 0B        | 112.0KB    |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer0.org2.example.com    | 104.8MB     | 104.8MB     | 20.36%   | 15.10%   | 8.3KB      | 18.5KB      | 0B        | 16.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer1.org2.example.com    | 107.5MB     | 107.2MB     | 16.51%   | 11.83%   | 7.0KB      | 13.8KB      | 0B        | 16.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer1.org1.example.com    | 103.5MB     | 103.3MB     | 16.02%   | 11.47%   | 7.0KB      | 13.8KB      | 0B        | 16.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer0.org1.example.com    | 104.1MB     | 103.9MB     | 16.22%   | 12.38%   | 8.8KB      | 18.5KB      | 0B        | 16.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | ca.org1.example.com               | 15.7MB      | 15.7MB      | 0.00%    | 0.00%    | 406B       | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | ca.org2.example.com               | 14.6MB      | 14.6MB      | 0.00%    | 0.00%    | 203B       | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | orderer.example.com               | 24.5MB      | 24.2MB      | 3.09%    | 2.36%    | 49.8KB     | 256.5KB     | 0B        | 60.0KB     |
++---------+-----------------------------------+-------------+-------------+----------+----------+------------+-------------+-----------+------------+
+ 
+
+2019-02-17T17:07:32+06:00 - INFO [bench-flow.js]: ------ Passed 'query' testing ------ 
+
+2019-02-17T17:07:32+06:00 - INFO [bench-flow.js]: Waiting 5 seconds for the next round... 
+
+2019-02-17T17:07:32+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 15 Succ: 15 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:33+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 15 Succ: 15 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:34+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 15 Succ: 15 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:35+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 15 Succ: 15 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:36+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 15 Succ: 15 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:37+06:00 - INFO [bench-flow.js]: ------ Test round 2 ------ 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":2,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":2}
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":2,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":0}
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":2,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":1}
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":2,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":3}
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"query","rateControl":{"type":"fixed-rate","opts":{"tps":5}},"trim":0,"cb":"benchmark/marbles/query.js","config":"network/fabric-v1.2/2org2peercouchdb/fabric-node.json","numb":3,"roundIdx":2,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":4}
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: txUpdateTime: 1000 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: Info: client 11766 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:37+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: Info: client 11778 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: Info: client 11760 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: Info: client 11771 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:37+06:00 - DEBUG [local-client.js]: Info: client 11755 start test runFixedNumber():Querying marbles. 
+
+2019-02-17T17:07:37+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:37+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:37+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:37+06:00 - DEBUG [rateControl.js]: *****
+	{"type":"fixed-rate","opts":{"tps":5}}
+
+2019-02-17T17:07:37+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 15 Succ: 15 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:38+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 20 Succ: 15 Fail:0 Unfinished:5 
+
+2019-02-17T17:07:39+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 25 Succ: 15 Fail:0 Unfinished:10 
+
+2019-02-17T17:07:40+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 30 Succ: 15 Fail:0 Unfinished:15 
+
+2019-02-17T17:07:42+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 30 Succ: 17 Fail:0 Unfinished:13 
+
+2019-02-17T17:07:43+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 30 Succ: 20 Fail:0 Unfinished:10 
+
+2019-02-17T17:07:44+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 30 Succ: 30 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:44+06:00 - DEBUG [bench-flow.js]: r.create.max: 1550401659.742 r.create.min: 1550401657.709 r.final.max: 1550401663.245 r.final.min: 1550401660.864 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: ###test result:### 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: 
++-------+------+------+-----------+-------------+-------------+-------------+------------+
+| Name  | Succ | Fail | Send Rate | Max Latency | Min Latency | Avg Latency | Throughput |
+|-------|------|------|-----------|-------------|-------------|-------------|------------|
+| query | 15   | 0    | 7.4 tps   | 4.23 s      | 3.12 s      | 3.76 s      | 2.7 tps    |
++-------+------+------+-----------+-------------+-------------+-------------+------------+
+ 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: ### resource stats ### 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: 
++---------+-----------------------------------+-------------+-------------+----------+----------+------------+-------------+-----------+------------+
+| TYPE    | NAME                              | Memory(max) | Memory(avg) | CPU(max) | CPU(avg) | Traffic In | Traffic Out | Disc Read | Disc Write |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Process | node local-client.js(avg)         | 105.6MB     | 105.6MB     | 7.47%    | 3.05%    | -          | -           | -         | -          |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org2.example.co...le-v0 | 46.7MB      | 46.7MB      | 0.00%    | 0.00%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org1.example.co...le-v0 | 46.2MB      | 46.2MB      | 0.00%    | 0.00%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org1.example.co...le-v0 | 46.6MB      | 46.6MB      | 0.01%    | 0.00%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org2.example.co...le-v0 | 46.1MB      | 46.1MB      | 0.01%    | 0.00%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org2.example.co...es-v1 | 48.5MB      | 48.4MB      | 0.69%    | 0.23%    | 8.1KB      | 2.8KB       | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org1.example.co...es-v1 | 49.1MB      | 48.8MB      | 0.57%    | 0.19%    | 6.1KB      | 1.9KB       | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org2.example.co...es-v1 | 48.2MB      | 48.2MB      | 0.70%    | 0.24%    | 6.0KB      | 1.7KB       | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org1.example.co...es-v1 | 51.2MB      | 51.1MB      | 0.63%    | 0.21%    | 8.0KB      | 2.7KB       | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | peer1.org1.example.com            | 176.3MB     | 176.1MB     | 4.13%    | 3.32%    | 58.2KB     | 13.7KB      | 0B        | 88.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | peer0.org1.example.com            | 196.5MB     | 196.5MB     | 4.25%    | 3.44%    | 64.5KB     | 79.8KB      | 0B        | 88.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | peer1.org2.example.com            | 197.2MB     | 197.1MB     | 4.91%    | 3.61%    | 60.8KB     | 137.7KB     | 0B        | 84.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | peer0.org2.example.com            | 197.6MB     | 197.4MB     | 4.18%    | 3.45%    | 63.6KB     | 99.1KB      | 0B        | 88.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer0.org2.example.com    | 105.0MB     | 104.9MB     | 8.94%    | 6.53%    | 8.3KB      | 11.7KB      | 0B        | 24.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer1.org2.example.com    | 107.7MB     | 107.6MB     | 12.76%   | 7.10%    | 6.5KB      | 8.3KB       | 0B        | 24.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer1.org1.example.com    | 103.6MB     | 103.6MB     | 7.96%    | 5.39%    | 8.1KB      | 9.2KB       | 0B        | 24.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer0.org1.example.com    | 104.8MB     | 104.8MB     | 10.29%   | 7.22%    | 8.4KB      | 11.5KB      | 0B        | 24.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | ca.org1.example.com               | 15.7MB      | 15.7MB      | 0.00%    | 0.00%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | ca.org2.example.com               | 14.6MB      | 14.6MB      | 0.00%    | 0.00%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|-----------|------------|
+| Docker  | orderer.example.com               | 25.5MB      | 25.3MB      | 1.84%    | 0.78%    | 28.6KB     | 170.4KB     | 0B        | 32.0KB     |
++---------+-----------------------------------+-------------+-------------+----------+----------+------------+-------------+-----------+------------+
+ 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: ------ Passed 'query' testing ------ 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: ---------- Finished Test ----------
+ 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: ###all test results:### 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: 
++------+-------+------+------+-----------+-------------+-------------+-------------+------------+
+| Test | Name  | Succ | Fail | Send Rate | Max Latency | Min Latency | Avg Latency | Throughput |
+|------|-------|------|------|-----------|-------------|-------------|-------------|------------|
+| 1    | query | 15   | 0    | 7.4 tps   | 1.26 s      | 0.98 s      | 1.10 s      | 4.9 tps    |
+|------|-------|------|------|-----------|-------------|-------------|-------------|------------|
+| 2    | query | 15   | 0    | 7.4 tps   | 4.23 s      | 3.12 s      | 3.76 s      | 2.7 tps    |
++------+-------+------+------+-----------+-------------+-------------+-------------+------------+
+ 
+
+2019-02-17T17:07:44+06:00 - INFO [monitor.js]: 
+ ### resource stats (maximum) ### 
+
+2019-02-17T17:07:44+06:00 - INFO [monitor.js]: 
++---------+-----------------------------------+-------------+----------+------------+-------------+-----------+------------+
+| TYPE    | NAME                              | Memory(max) | CPU(max) | Traffic In | Traffic Out | Disc Read | Disc Write |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Process | node local-client.js(avg)         | 105.6MB     | 20.38%   | -          | -           | -         | -          |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org2.example.co...le-v0 | 46.7MB      | 0.01%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org1.example.co...le-v0 | 46.2MB      | 0.01%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org1.example.co...le-v0 | 46.6MB      | 0.01%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org2.example.co...le-v0 | 46.1MB      | 0.01%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org2.example.co...es-v1 | 53.6MB      | 2.04%    | 12.5KB     | 5.5KB       | 0B        | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org1.example.co...es-v1 | 53.9MB      | 1.67%    | 8.5KB      | 3.8KB       | 20.0KB    | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer1.org2.example.co...es-v1 | 53.9MB      | 1.79%    | 8.8KB      | 4.1KB       | 0B        | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | dev-peer0.org1.example.co...es-v1 | 56.3MB      | 2.00%    | 12.4KB     | 5.5KB       | 72.0KB    | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | peer1.org1.example.com            | 176.3MB     | 4.44%    | 89.3KB     | 85.2KB      | 0B        | 124.0KB    |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | peer0.org1.example.com            | 196.5MB     | 4.89%    | 98.3KB     | 92.9KB      | 0B        | 124.0KB    |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | peer1.org2.example.com            | 197.2MB     | 4.91%    | 89.5KB     | 137.7KB     | 0B        | 124.0KB    |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | peer0.org2.example.com            | 197.6MB     | 4.68%    | 100.8KB    | 155.6KB     | 0B        | 124.0KB    |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer0.org2.example.com    | 105.0MB     | 20.36%   | 9.1KB      | 19.4KB      | 0B        | 76.0KB     |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer1.org2.example.com    | 107.7MB     | 16.51%   | 7.7KB      | 14.7KB      | 0B        | 76.0KB     |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer1.org1.example.com    | 103.6MB     | 16.02%   | 8.1KB      | 14.7KB      | 0B        | 76.0KB     |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | couchdb.peer0.org1.example.com    | 104.8MB     | 16.22%   | 9.8KB      | 19.4KB      | 0B        | 76.0KB     |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | ca.org1.example.com               | 15.7MB      | 0.00%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | ca.org2.example.com               | 14.6MB      | 0.00%    | 2.0KB      | 0B          | 0B        | 0B         |
+|---------|-----------------------------------|-------------|----------|------------|-------------|-----------|------------|
+| Docker  | orderer.example.com               | 25.5MB      | 3.09%    | 50.0KB     | 256.5KB     | 0B        | 60.0KB     |
++---------+-----------------------------------+-------------+----------+------------+-------------+-----------+------------+
+ 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: Generated report at /home/kingbayeed/hyperledger/caliper/report-20190217T110744.html 
+
+2019-02-17T17:07:44+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 30 Succ: 30 Fail:0 Unfinished:0 
+
+2019-02-17T17:07:44+06:00 - INFO [bench-flow.js]: Executing command: docker-compose -f network/fabric-v1.2/2org2peercouchdb/docker-compose.yaml down;docker rm $(docker ps -aq);docker rmi $(docker images dev* -q) 
+
+2019-02-17T17:07:44+06:00 - INFO [client-util.js]: Client exited  
+
+2019-02-17T17:07:44+06:00 - INFO [client-util.js]: Client exited  
+
+2019-02-17T17:07:44+06:00 - INFO [client-util.js]: Client exited  
+
+2019-02-17T17:07:44+06:00 - INFO [client-util.js]: Client exited  
+
+2019-02-17T17:07:44+06:00 - INFO [client-util.js]: Client exited  
+
+2019-02-17T17:07:54+06:00 - ERROR [monitor-docker.js]: TypeError: Cannot read property 'id' of undefined 
+
+2019-02-17T17:07:59+06:00 - INFO [bench-flow.js]: 
+        
+#######################################
+# Test summary: 2 succeeded, 0 failed #
+#######################################
+ 
+

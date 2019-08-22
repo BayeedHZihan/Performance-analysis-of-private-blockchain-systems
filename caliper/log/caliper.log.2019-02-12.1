@@ -1,0 +1,196 @@
+2019-02-12T12:24:09+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:24:09+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-02-12T12:24:09+06:00 - INFO [bench-flow.js]: Executing command: docker-compose -f network/fabric-v1.2/2org1peercouchdb/docker-compose-tls.yaml up -d;sleep 3s 
+
+2019-02-12T12:24:19+06:00 - INFO [create-channel.js]: Creating mychannel... 
+
+2019-02-12T12:24:20+06:00 - INFO [create-channel.js]: Created mychannel successfully 
+
+2019-02-12T12:24:20+06:00 - INFO [create-channel.js]: Sleeping 5s... 
+
+2019-02-12T12:24:25+06:00 - INFO [join-channel.js]: Joining channels... 
+
+2019-02-12T12:24:25+06:00 - INFO [join-channel.js]: Joining mychannel... 
+
+2019-02-12T12:24:26+06:00 - INFO [join-channel.js]: Successfully joined peerOrg1's peers to mychannel 
+
+2019-02-12T12:24:26+06:00 - INFO [join-channel.js]: Successfully joined mychannel 
+
+2019-02-12T12:24:26+06:00 - INFO [install-chaincode.js]: Installing chaincodes... 
+
+2019-02-12T12:24:26+06:00 - INFO [install-chaincode.js]: Installed chaincode fabcar successfully in all peers 
+
+2019-02-12T12:24:26+06:00 - INFO [instantiate-chaincode.js]: Instantiating chaincodes... 
+
+2019-02-12T12:24:38+06:00 - INFO [e2eUtils.js]: The chaincode instantiate transaction was valid. 
+
+2019-02-12T12:24:38+06:00 - INFO [instantiate-chaincode.js]: Instantiated chaincode fabcar successfully 
+
+2019-02-12T12:24:38+06:00 - INFO [instantiate-chaincode.js]: Sleeping 5s... 
+
+2019-02-12T12:24:43+06:00 - INFO [bench-flow.js]: Started monitor successfully 
+
+2019-02-12T12:24:43+06:00 - INFO [bench-flow.js]: ###### Testing 'open' ###### 
+
+2019-02-12T12:24:43+06:00 - INFO [bench-flow.js]: ------ Test round 1 ------ 
+
+2019-02-12T12:24:43+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:24:43+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":1}
+
+2019-02-12T12:24:43+06:00 - ERROR [bench-flow.js]: ------ Failed 'open' testing with the following error ------
+Error: Client encountered error:SyntaxError: await is only valid in async function
+    at ChildProcess.<anonymous> (/home/kingbayeed/hyperledger/caliper/src/comm/client/client-util.js:74:36)
+    at emitTwo (events.js:126:13)
+    at ChildProcess.emit (events.js:214:7)
+    at emit (internal/child_process.js:772:12)
+    at _combinedTickCallback (internal/process/next_tick.js:141:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9) 
+
+2019-02-12T12:24:43+06:00 - INFO [bench-flow.js]: ---------- Finished Test ----------
+ 
+
+2019-02-12T12:24:43+06:00 - ERROR [bench-flow.js]: Error: TypeError: Cannot read property 'unshift' of undefined
+    at printResultsByRound (/home/kingbayeed/hyperledger/caliper/src/comm/bench-flow.js:135:23)
+    at Object.module.exports.run (/home/kingbayeed/hyperledger/caliper/src/comm/bench-flow.js:336:9)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) 
+
+2019-02-12T12:24:43+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0 
+
+2019-02-12T12:24:43+06:00 - INFO [bench-flow.js]: Executing command: docker-compose -f network/fabric-v1.2/2org1peercouchdb/docker-compose-tls.yaml down;docker rm $(docker ps -aq);docker rmi $(docker images dev* -q) 
+
+2019-02-12T12:24:44+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:24:44+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":4,"numb":null}
+
+2019-02-12T12:24:44+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:24:44+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":3}
+
+2019-02-12T12:24:44+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:24:44+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":0}
+
+2019-02-12T12:24:44+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:24:44+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":2}
+
+2019-02-12T12:24:56+06:00 - INFO [bench-flow.js]: 
+        
+#######################################
+# Test summary: 0 succeeded, 1 failed #
+#######################################
+ 
+
+2019-02-12T12:27:27+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:27:27+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-02-12T12:27:27+06:00 - INFO [bench-flow.js]: Executing command: docker-compose -f network/fabric-v1.2/2org1peercouchdb/docker-compose-tls.yaml up -d;sleep 3s 
+
+2019-02-12T12:27:37+06:00 - INFO [create-channel.js]: Creating mychannel... 
+
+2019-02-12T12:27:37+06:00 - INFO [create-channel.js]: Created mychannel successfully 
+
+2019-02-12T12:27:37+06:00 - INFO [create-channel.js]: Sleeping 5s... 
+
+2019-02-12T12:27:42+06:00 - INFO [join-channel.js]: Joining channels... 
+
+2019-02-12T12:27:42+06:00 - INFO [join-channel.js]: Joining mychannel... 
+
+2019-02-12T12:27:43+06:00 - INFO [join-channel.js]: Successfully joined peerOrg1's peers to mychannel 
+
+2019-02-12T12:27:43+06:00 - INFO [join-channel.js]: Successfully joined mychannel 
+
+2019-02-12T12:27:43+06:00 - INFO [install-chaincode.js]: Installing chaincodes... 
+
+2019-02-12T12:27:43+06:00 - INFO [install-chaincode.js]: Installed chaincode fabcar successfully in all peers 
+
+2019-02-12T12:27:43+06:00 - INFO [instantiate-chaincode.js]: Instantiating chaincodes... 
+
+2019-02-12T12:27:56+06:00 - INFO [e2eUtils.js]: The chaincode instantiate transaction was valid. 
+
+2019-02-12T12:27:56+06:00 - INFO [instantiate-chaincode.js]: Instantiated chaincode fabcar successfully 
+
+2019-02-12T12:27:56+06:00 - INFO [instantiate-chaincode.js]: Sleeping 5s... 
+
+2019-02-12T12:28:01+06:00 - INFO [bench-flow.js]: Started monitor successfully 
+
+2019-02-12T12:28:01+06:00 - INFO [bench-flow.js]: ###### Testing 'open' ###### 
+
+2019-02-12T12:28:01+06:00 - INFO [bench-flow.js]: ------ Test round 1 ------ 
+
+2019-02-12T12:28:01+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:28:01+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":0}
+
+2019-02-12T12:28:01+06:00 - ERROR [bench-flow.js]: ------ Failed 'open' testing with the following error ------
+Error: Client encountered error:SyntaxError: await is only valid in async function
+    at ChildProcess.<anonymous> (/home/kingbayeed/hyperledger/caliper/src/comm/client/client-util.js:74:36)
+    at emitTwo (events.js:126:13)
+    at ChildProcess.emit (events.js:214:7)
+    at emit (internal/child_process.js:772:12)
+    at _combinedTickCallback (internal/process/next_tick.js:141:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9) 
+
+2019-02-12T12:28:01+06:00 - INFO [bench-flow.js]: ---------- Finished Test ----------
+ 
+
+2019-02-12T12:28:01+06:00 - ERROR [bench-flow.js]: Error: TypeError: Cannot read property 'unshift' of undefined
+    at printResultsByRound (/home/kingbayeed/hyperledger/caliper/src/comm/bench-flow.js:135:23)
+    at Object.module.exports.run (/home/kingbayeed/hyperledger/caliper/src/comm/bench-flow.js:336:9)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) 
+
+2019-02-12T12:28:01+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0 
+
+2019-02-12T12:28:01+06:00 - INFO [bench-flow.js]: Executing command: docker-compose -f network/fabric-v1.2/2org1peercouchdb/docker-compose-tls.yaml down;docker rm $(docker ps -aq);docker rmi $(docker images dev* -q) 
+
+2019-02-12T12:28:01+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:28:01+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:28:01+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":3}
+
+2019-02-12T12:28:01+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:28:01+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":2}
+
+2019-02-12T12:28:01+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":1}
+
+2019-02-12T12:28:01+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-02-12T12:28:01+06:00 - DEBUG [local-client.js]: doTest() with:
+	{"type":"test","label":"open","rateControl":{"type":"linear-rate","opts":{"startingTps":25,"finishingTps":75}},"trim":0,"args":{"money":10000},"cb":"benchmark/fabcar/changeCarOwner.js","config":"network/fabric-v1.2/2org1peercouchdb/fabricFabcar.json","txDuration":15,"roundIdx":1,"totalClients":5,"clients":5,"clientargs":{},"clientIdx":4,"numb":null}
+
+2019-02-12T12:28:13+06:00 - INFO [bench-flow.js]: 
+        
+#######################################
+# Test summary: 0 succeeded, 1 failed #
+#######################################
+ 
+

@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for comm/rate-control/compositeRate.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">comm/rate-control</a> compositeRate.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/88</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/83</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+&nbsp;
+'use strict';
+const RateInterface = <span class="cstat-no" title="statement not covered" >require('./rateInterface.js');</span>
+const RateControl = <span class="cstat-no" title="statement not covered" >require('./rateControl.js');</span>
+const Util = <span class="cstat-no" title="statement not covered" >require('../util');</span>
+const logger = <span class="cstat-no" title="statement not covered" >Util.getLogger('compositeRate.js');</span>
+&nbsp;
+/**
+ * Encapsulates a controller and its scheduling information.
+ *
+ * Time related values are expressed in millisecond!
+ *
+ * @property {number} weight The weight associated with the controller.
+ * @property {boolean} last Indicates whether the controller is the last in the round.
+ * @property {object} controllerOptions The supplied options for the controller.
+ * @property {RateControl} controller The controller instance.
+ * @property {number} firstTxIndex The first Tx index associated with the controller.
+ *                                 It is used to calculate the adjusted Tx index passed to the controller.
+ * @property {number} startTimeDifference The difference between the start time of the round and the controller.
+ *                                        It is used to calculate the adjusted start time passed to the controller.
+ * @property {number} lastTxIndex The last Tx index associated with the controller based on its weight.
+ *                                Only used in Tx number-based rounds.
+ * @property {number} relFinishTime The finish time of the controller based on its weight, relative to the start time of the round.
+ *                                  Only used in duration-based rounds.
+ */
+class ControllerData {
+    /**
+     * Initialize a new instance of the ControllerData class.
+     * @param {number} weight The weight associated with the controller.
+     * @param {object} controllerOptions The specified options for the controller.
+     * @param {RateControl} controller The controller object.
+     */
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(weight, controllerOptions, controller) {
+<span class="cstat-no" title="statement not covered" >        this.weight = weight;</span>
+<span class="cstat-no" title="statement not covered" >        this.isLast = false;</span>
+<span class="cstat-no" title="statement not covered" >        this.controllerOptions = controllerOptions;</span>
+<span class="cstat-no" title="statement not covered" >        this.controller = controller;</span>
+<span class="cstat-no" title="statement not covered" >        this.firstTxIndex = 0; </span>// correct default value for the first sub-controller
+<span class="cstat-no" title="statement not covered" >        this.startTimeDifference = 0; </span>// correct default value for the first sub-controller
+<span class="cstat-no" title="statement not covered" >        this.lastTxIndex = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.relFinishTime = 0;</span>
+    }
+}
+&nbsp;
+/**
+ * Composite rate controller for applying different rate controllers after one an other in the same round.
+ *
+ * Time related values are expressed in millisecond!
+ *
+ * @property {Blockchain} blockchain The initialized blockchain object.
+ * @property {object} options The user-supplied options for the controller.
+ * @property {number[]} options.weights The list of weights for the different controllers.
+ * @property {object[]} options.rateControllers The list of descriptors of the controllers.
+ * @property {boolean} options.logChange Indicates whether to log when switching to a new controller.
+ * @property {ControllerData[]} controllers The list of relevant controllers and their scheduling information.
+ * @property {number} activeControllerIndex The index of the currently active controller.
+ * @property {number} clientIdx The index of the current client.
+ * @property {function} controllerSwitch Duration-based or Tx number-based function for handling controller switches.
+ */
+class CompositeRateController extends RateInterface{
+    /**
+     * Creates a new instance of the CompositeRateController class.
+     * @constructor
+     * @param {Blockchain} blockchain The initialized blockchain object.
+     * @param {object} opts Options for the rate controller.
+     * @throws {Error} Throws error if there is a problem with the weight and/or controller options.
+     */
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(blockchain, opts) {
+<span class="cstat-no" title="statement not covered" >        super(blockchain, opts);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.controllers = [];</span>
+<span class="cstat-no" title="statement not covered" >        this.activeControllerIndex = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.clientIdx = -1;</span>
+<span class="cstat-no" title="statement not covered" >        this.controllerSwitch = null;</span>
+<span class="cstat-no" title="statement not covered" >        this.logControllerChange = (this.options.logChange &amp;&amp;</span>
+            typeof(this.options.logChange) === 'boolean' &amp;&amp; this.options.logChange) || false;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.__prepareControllers();</span>
+    }
+&nbsp;
+    /**
+     * Internal method for preparing the controllers for further use.
+     * @private
+     */
+<span class="fstat-no" title="function not covered" >    __</span>prepareControllers() {
+        let weights = <span class="cstat-no" title="statement not covered" >this.options.weights;</span>
+        let rateControllers = <span class="cstat-no" title="statement not covered" >this.options.rateControllers;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (!Array.isArray(weights) || !Array.isArray(rateControllers)) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error('Weight and controller definitions must be arrays.');</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (weights.length !== rateControllers.length) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error('The number of weights and controllers must be the same.');</span>
+        }
+&nbsp;
+        const nan = <span class="cstat-no" title="statement not covered" >weights.find(<span class="fstat-no" title="function not covered" >w </span>=&gt; <span class="cstat-no" title="statement not covered" >isNaN(Number(w)))</span>;</span>
+<span class="cstat-no" title="statement not covered" >        if (nan) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error('Not-a-number element among weights: ' + nan);</span>
+        }
+&nbsp;
+        // store them explicitly as numbers to avoid surprises later
+<span class="cstat-no" title="statement not covered" >        weights = weights.map(<span class="fstat-no" title="function not covered" >w </span>=&gt; <span class="cstat-no" title="statement not covered" >Number(w))</span>;</span>
+&nbsp;
+        // check for negative weights
+        // zero weights should be fine to allow easy temporary removal of controllers from the config file
+        const negativeWeight = <span class="cstat-no" title="statement not covered" >weights.find(<span class="fstat-no" title="function not covered" >w </span>=&gt; <span class="cstat-no" title="statement not covered" >w &lt; 0)</span>;</span>
+<span class="cstat-no" title="statement not covered" >        if (negativeWeight) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error('Negative element among weights: ' + negativeWeight);</span>
+        }
+&nbsp;
+        // normalize weights
+        const weightSum = <span class="cstat-no" title="statement not covered" >weights.reduce(<span class="fstat-no" title="function not covered" >(p</span>rev, w) =&gt; <span class="cstat-no" title="statement not covered" >prev + w,</span> 0);</span>
+<span class="cstat-no" title="statement not covered" >        if (weightSum === 0) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error('Every weight is zero.');</span>
+        }
+<span class="cstat-no" title="statement not covered" >        weights = weights.map(<span class="fstat-no" title="function not covered" >w </span>=&gt; <span class="cstat-no" title="statement not covered" >w / weightSum)</span>;</span>
+&nbsp;
+        // create controller instances, skip zero-weight cases
+<span class="cstat-no" title="statement not covered" >        for (let i = 0; i &lt; weights.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered" >            if (weights[i] === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                continue;</span>
+            }
+&nbsp;
+            let info = <span class="cstat-no" title="statement not covered" >new ControllerData(weights[i], rateControllers[i], new RateControl(rateControllers[i], this.blockchain));</span>
+<span class="cstat-no" title="statement not covered" >            this.controllers.push(info);</span>
+        }
+&nbsp;
+        // mark the last controller
+<span class="cstat-no" title="statement not covered" >        this.controllers[this.controllers.length - 1].isLast = true;</span>
+    }
+&nbsp;
+    /**
+     * Internal method for switching controller (when needed) in a duration-based round.
+     * @param {number} start The start time of the round provided by the client module.
+     * @param {number} idx The index of the current Tx provided by the client module.
+     * @private
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync __controllerSwitchForDuration(start, idx) {
+        let active = <span class="cstat-no" title="statement not covered" >this.controllers[this.activeControllerIndex];</span>
+        const timeNow = <span class="cstat-no" title="statement not covered" >Date.now();</span>
+<span class="cstat-no" title="statement not covered" >        if (active.isLast || ((timeNow - start) &lt; active.relFinishTime)) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        await active.controller.end();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.activeControllerIndex++;</span>
+<span class="cstat-no" title="statement not covered" >        active = this.controllers[this.activeControllerIndex];</span>
+<span class="cstat-no" title="statement not covered" >        active.firstTxIndex = idx;</span>
+<span class="cstat-no" title="statement not covered" >        active.startTimeDifference = Date.now() - start;</span>
+<span class="cstat-no" title="statement not covered" >        if (this.logControllerChange) {</span>
+<span class="cstat-no" title="statement not covered" >            logger.debug(`[CompositeRateController] Switching controller in Client#${this.clientIdx} at Tx#${idx} after ${active.startTimeDifference}ms.`);</span>
+        }
+    }
+&nbsp;
+    /**
+     * Internal method for switching controller (when needed) in a Tx number-based round.
+     * @param {number} start The start time of the round provided by the client module.
+     * @param {number} idx The index of the current Tx provided by the client module.
+     * @private
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync __controllerSwitchForTxNumber(start, idx) {
+        let active = <span class="cstat-no" title="statement not covered" >this.controllers[this.activeControllerIndex];</span>
+<span class="cstat-no" title="statement not covered" >        if (active.isLast || (idx &lt;= active.lastTxIndex)) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        await active.controller.end();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.activeControllerIndex++;</span>
+<span class="cstat-no" title="statement not covered" >        active = this.controllers[this.activeControllerIndex];</span>
+<span class="cstat-no" title="statement not covered" >        active.firstTxIndex = idx ;</span>
+<span class="cstat-no" title="statement not covered" >        active.startTimeDifference = Date.now() - start;</span>
+<span class="cstat-no" title="statement not covered" >        if (this.logControllerChange) {</span>
+<span class="cstat-no" title="statement not covered" >            logger.debug(`[CompositeRateController] Switching controller in Client#${this.clientIdx} at Tx#${idx} after ${active.startTimeDifference}ms.`);</span>
+        }
+    }
+&nbsp;
+    /**
+     * Initializes the composite rate controller.
+     *
+     * @param {object} msg Client options with adjusted per-client load settings.
+     * @param {string} msg.type The type of the message. Currently always 'test'
+     * @param {string} msg.label The label of the round.
+     * @param {object} msg.rateControl The rate control to use for the round.
+     * @param {number} msg.trim The number/seconds of transactions to trim from the results.
+     * @param {object} msg.args The user supplied arguments for the round.
+     * @param {string} msg.cb The path of the user's callback module.
+     * @param {string} msg.config The path of the network's configuration file.
+     * @param {number} msg.numb The number of transactions to generate during the round.
+     * @param {number} msg.txDuration The length of the round in SECONDS.
+     * @param {number} msg.totalClients The number of clients executing the round.
+     * @param {number} msg.clients The number of clients executing the round.
+     * @param {object} msg.clientargs Arguments for the client.
+     * @param {number} msg.clientIdx The 0-based index of the current client.
+     * @param {number} msg.roundIdx The 1-based index of the current round.
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync init(msg) {
+        let currentSum = <span class="cstat-no" title="statement not covered" >0;</span>
+<span class="cstat-no" title="statement not covered" >        this.clientIdx = msg.clientIdx + 1;</span>
+&nbsp;
+        // pre-set switch logic to avoid an other condition check during rate control
+<span class="cstat-no" title="statement not covered" >        this.controllerSwitch = msg.numb ? this.__controllerSwitchForTxNumber : this.__controllerSwitchForDuration;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (let i = 0; i &lt; this.controllers.length; ++i) {</span>
+            let controllerData = <span class="cstat-no" title="statement not covered" >this.controllers[i];</span>
+<span class="cstat-no" title="statement not covered" >            currentSum += controllerData.weight;</span>
+&nbsp;
+            // create a modified copy of the client options according to the weights
+            let controllerMsg = <span class="cstat-no" title="statement not covered" >Object.assign({}, msg);</span>
+<span class="cstat-no" title="statement not covered" >            controllerMsg.rateControl = controllerData.controllerOptions;</span>
+&nbsp;
+            // scale down number of txs or duration
+<span class="cstat-no" title="statement not covered" >            if (msg.numb) {</span>
+<span class="cstat-no" title="statement not covered" >                controllerMsg.numb = Math.floor(msg.numb * controllerData.weight);</span>
+<span class="cstat-no" title="statement not covered" >                controllerData.lastTxIndex = Math.floor(msg.numb * currentSum);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                controllerMsg.txDuration = Math.floor(msg.txDuration * controllerData.weight);</span>
+<span class="cstat-no" title="statement not covered" >                controllerData.relFinishTime = Math.floor(msg.txDuration * 1000 * currentSum);</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            await controllerData.controller.init(controllerMsg);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.activeControllerIndex = 0;</span>
+    }
+&nbsp;
+    /**
+     * Perform the rate control by delegating to the currently active controller
+     * and switching controller (if necessary).
+     * @param {number} start The epoch time at the start of the round (ms precision).
+     * @param {number} idx Sequence number of the current transaction.
+     * @param {object[]} recentResults The list of results of recent transactions.
+     * @param {Array} resultStats, result status set
+     * @return {Promise} A promise that will resolve after the necessary time to keep the defined Tx rate.
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync applyRateControl(start, idx, recentResults, resultStats) {
+<span class="cstat-no" title="statement not covered" >        await this.controllerSwitch(start, idx);</span>
+        const active = <span class="cstat-no" title="statement not covered" >this.controllers[this.activeControllerIndex];</span>
+        // NOTE: since we don't know much about the transaction indices corresponding to
+        // the recent results (the list is emptied periodically), pass it as it is
+&nbsp;
+        // if (idx - this.firstTxIndex + 1) &gt;= recentResults.length  ==&gt; everything is transparent, the rate controller
+        // has been running long enough, so every recent result belongs to it
+        // otherwise ==&gt; some results MUST belong to the previous controller, but we dont't know which result index
+        // corresponds to active.firstTxIndex, maybe none of them, because this phase hasn't produced results yet
+&nbsp;
+        // lie to the controller about the parameters to make this controller transparent
+<span class="cstat-no" title="statement not covered" >        return active.controller.applyRateControl(start + active.startTimeDifference, idx - active.firstTxIndex,</span>
+            recentResults, resultStats);
+    }
+&nbsp;
+    /**
+     * Notify the rate controller about the end of the round.
+     *
+     * @return {Promise} The return promise
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync end() {
+<span class="cstat-no" title="statement not covered" >        return this.controllers[this.activeControllerIndex].controller.end();</span>
+    }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = CompositeRateController;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 14:27:05 GMT+0600 (+06)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

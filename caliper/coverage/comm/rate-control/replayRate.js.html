@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for comm/rate-control/replayRate.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">comm/rate-control</a> replayRate.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+&nbsp;
+'use strict';
+&nbsp;
+const RateInterface = <span class="cstat-no" title="statement not covered" >require('./rateInterface.js');</span>
+const fs = <span class="cstat-no" title="statement not covered" >require('fs');</span>
+const util = <span class="cstat-no" title="statement not covered" >require('../util');</span>
+const logger = <span class="cstat-no" title="statement not covered" >util.getLogger('replayRate.js');</span>
+&nbsp;
+const TEXT_FORMAT = <span class="cstat-no" title="statement not covered" >'TEXT';</span>
+const BINARY_BE_FORMAT = <span class="cstat-no" title="statement not covered" >'BIN_BE';</span>
+const BINARY_LE_FORMAT = <span class="cstat-no" title="statement not covered" >'BIN_LE';</span>
+const supportedFormats = <span class="cstat-no" title="statement not covered" >[TEXT_FORMAT, BINARY_BE_FORMAT, BINARY_LE_FORMAT];</span>
+&nbsp;
+/**
+ * Rate controller for replaying a previously recorded transaction trace.
+ *
+ * @property {Blockchain} blockchain The initialized blockchain object.
+ * @property {object} options The user-supplied options for the controller.
+ * @property {object[]} records The record of times for submitted transactions.
+ * @property {string} pathTemplate The template path for the file to record to.
+ * @property {number} roundIdx The index of the current round.
+ * @property {number} clientIdx The index of the current client.
+ * @property {string} inputFormat Specifies the input format for the recordings.
+ * @property {number} defaultSleepTime The default sleep time between extra transactions.
+ * @property {string} delimiter The delimiter character for the CSV format.
+ * @property {boolean} logWarnings Indicates whether to log extra transaction warnings.
+ */
+class ReplayRateController extends RateInterface{
+    /**
+     * Creates a new instance of the {ReplayRateController} class.
+     * @constructor
+     * @param {Blockchain} blockchain The initialized blockchain object.
+     * @param {object} opts Options for the rate controller.
+     */
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(blockchain, opts) {
+<span class="cstat-no" title="statement not covered" >        super(blockchain, opts);</span>
+<span class="cstat-no" title="statement not covered" >        this.records = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (typeof opts.pathTemplate === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error('The path to load the recording from is undefined');</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.pathTemplate = opts.pathTemplate;</span>
+<span class="cstat-no" title="statement not covered" >        this.logWarnings = Boolean(opts.logWarnings || false);</span>
+<span class="cstat-no" title="statement not covered" >        this.defaultSleepTime = Number(opts.defaultSleepTime || 20);</span>
+&nbsp;
+        // check for supported input formats
+<span class="cstat-no" title="statement not covered" >        if (typeof opts.inputFormat === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            logger.warn(`[ReplayRateController] Input format is undefined. Defaulting to ${TEXT_FORMAT} format`);</span>
+<span class="cstat-no" title="statement not covered" >            this.inputFormat = TEXT_FORMAT;</span>
+        } else <span class="cstat-no" title="statement not covered" >if (supportedFormats.includes(opts.inputFormat.toUpperCase())) {</span>
+<span class="cstat-no" title="statement not covered" >            this.inputFormat = opts.inputFormat.toUpperCase();</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            logger.warn(`[ReplayRateController] Input format ${opts.inputFormat} is not supported. Defaulting to CSV format`);</span>
+<span class="cstat-no" title="statement not covered" >            this.inputFormat = TEXT_FORMAT;</span>
+        }
+    }
+&nbsp;
+    /**
+     * Initializes the rate controller.
+     *
+     * @param {object} msg Client options with adjusted per-client load settings.
+     * @param {string} msg.type The type of the message. Currently always 'test'
+     * @param {string} msg.label The label of the round.
+     * @param {object} msg.rateControl The rate control to use for the round.
+     * @param {number} msg.trim The number/seconds of transactions to trim from the results.
+     * @param {object} msg.args The user supplied arguments for the round.
+     * @param {string} msg.cb The path of the user's callback module.
+     * @param {string} msg.config The path of the network's configuration file.
+     * @param {number} msg.numb The number of transactions to generate during the round.
+     * @param {number} msg.txDuration The length of the round in SECONDS.
+     * @param {number} msg.totalClients The number of clients executing the round.
+     * @param {number} msg.clients The number of clients executing the round.
+     * @param {object} msg.clientargs Arguments for the client.
+     * @param {number} msg.clientIdx The 0-based index of the current client.
+     * @param {number} msg.roundIdx The 1-based index of the current round.
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync init(msg) {
+<span class="cstat-no" title="statement not covered" >        this.roundIdx = msg.roundIdx;</span>
+<span class="cstat-no" title="statement not covered" >        this.clientIdx = msg.clientIdx + 1;</span>
+&nbsp;
+        // resolve template path placeholders
+<span class="cstat-no" title="statement not covered" >        this.pathTemplate = this.pathTemplate.replace(/&lt;R&gt;/gi, this.roundIdx.toString());</span>
+<span class="cstat-no" title="statement not covered" >        this.pathTemplate = this.pathTemplate.replace(/&lt;C&gt;/gi, this.clientIdx.toString());</span>
+<span class="cstat-no" title="statement not covered" >        this.pathTemplate = util.resolvePath(this.pathTemplate);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (!fs.existsSync(this.pathTemplate)) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error(`Trace file does not exist: ${this.pathTemplate}`);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        switch (this.inputFormat) {</span>
+        case TEXT_FORMAT:
+<span class="cstat-no" title="statement not covered" >            this.importFromText();</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+        case BINARY_BE_FORMAT:
+<span class="cstat-no" title="statement not covered" >            this.importFromBinaryBigEndian();</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+        case BINARY_LE_FORMAT:
+<span class="cstat-no" title="statement not covered" >            this.importFromBinaryLittleEndian();</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            throw new Error(`Unsupported replay rate controller input format: ${this.inputFormat}`);</span>
+        }
+    }
+&nbsp;
+    /**
+     * Perform the rate control by sleeping through the round.
+     * @param {number} start The epoch time at the start of the round (ms precision).
+     * @param {number} idx Sequence number of the current transaction.
+     * @param {object[]} recentResults The list of results of recent transactions.
+     * @return {Promise} The return promise.
+     */
+<span class="fstat-no" title="function not covered" >    as</span>ync applyRateControl(start, idx, recentResults) {
+<span class="cstat-no" title="statement not covered" >        if (idx &lt;= this.records.length - 1) {</span>
+            let sleepTime = <span class="cstat-no" title="statement not covered" >this.records[idx] - (Date.now() - start);</span>
+<span class="cstat-no" title="statement not covered" >            return sleepTime &gt; 5 ? util.sleep(sleepTime) : Promise.resolve();</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            if (this.logWarnings) {</span>
+<span class="cstat-no" title="statement not covered" >                logger.warn(`[ReplayRateController] Using default sleep time of ${this.defaultSleepTime}ms for Tx#${idx}`);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return util.sleep(this.defaultSleepTime);</span>
+        }
+    }
+&nbsp;
+    /**
+     * Imports the timings from a one-column CSV format.
+     */
+<span class="fstat-no" title="function not covered" >    im</span>portFromText() {
+<span class="cstat-no" title="statement not covered" >        this.records = fs.readFileSync(this.pathTemplate, 'utf-8').split('\n').map(<span class="fstat-no" title="function not covered" >li</span>ne =&gt; <span class="cstat-no" title="statement not covered" >parseInt(line))</span>;</span>
+    }
+&nbsp;
+    /**
+     * Imports the timings from a little endian binary format.
+     */
+<span class="fstat-no" title="function not covered" >    im</span>portFromBinaryLittleEndian() {
+        let buffer = <span class="cstat-no" title="statement not covered" >fs.readFileSync(this.pathTemplate);</span>
+        let length = <span class="cstat-no" title="statement not covered" >buffer.readUInt32LE(0);</span>
+<span class="cstat-no" title="statement not covered" >        this.records = new Array(length);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (let i = 1; i &lt;= length; i++) {</span>
+            // because of the first 4 byte, the i-th record starts after i*4 bytes
+<span class="cstat-no" title="statement not covered" >            this.records[i - 1] = buffer.readUInt32LE(i * 4);</span>
+        }
+    }
+&nbsp;
+    /**
+     * Imports the timings from a big endian binary format.
+     */
+<span class="fstat-no" title="function not covered" >    im</span>portFromBinaryBigEndian() {
+        let buffer = <span class="cstat-no" title="statement not covered" >fs.readFileSync(this.pathTemplate);</span>
+        let length = <span class="cstat-no" title="statement not covered" >buffer.readUInt32BE(0);</span>
+<span class="cstat-no" title="statement not covered" >        this.records = new Array(length);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (let i = 1; i &lt;= length; i++) {</span>
+            // because of the first 4 byte, the i-th record starts after i*4 bytes
+<span class="cstat-no" title="statement not covered" >            this.records[i - 1] = buffer.readUInt32BE(i * 4);</span>
+        }
+    }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = ReplayRateController;</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 14:27:05 GMT+0600 (+06)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

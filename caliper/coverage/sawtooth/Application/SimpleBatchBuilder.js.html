@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for sawtooth/Application/SimpleBatchBuilder.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">sawtooth/Application</a> SimpleBatchBuilder.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>5/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>5/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Copyright 2017 HUAWEI All Rights Reserved.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ **/
+&nbsp;
+'use strict';
+&nbsp;
+const BatchBuilder = require('./BatchBuilder.js');
+&nbsp;
+/**
+ * BatchBuilder for simple use case and it use case specific logic to
+ * buildBatch and calculateAddress
+ */
+class SimpleBatchBuilder extends BatchBuilder {
+&nbsp;
+    /**
+     * Constructor
+     * @param {String} fName transaction family name
+     * @param {String} fVersion transaction family version
+     */
+    constructor(fName, fVersion) {
+        super();
+        this.familyName = fName;
+        this.familyVersion = fVersion;
+    }
+&nbsp;
+    /**
+     * Builds sawtooth batch from list of simple transactions
+     * @param {object} args list smallbank transactions
+     * @returns {object} batch list bytes
+     */
+<span class="fstat-no" title="function not covered" >    bu</span>ildBatch(args) {
+        const {createHash} = <span class="cstat-no" title="statement not covered" >require('crypto');</span>
+        const {createContext, CryptoFactory} = <span class="cstat-no" title="statement not covered" >require('sawtooth-sdk/signing');</span>
+        const context = <span class="cstat-no" title="statement not covered" >createContext('secp256k1');</span>
+        const {protobuf} = <span class="cstat-no" title="statement not covered" >require('sawtooth-sdk');</span>
+&nbsp;
+        const privateKey = <span class="cstat-no" title="statement not covered" >context.newRandomPrivateKey();</span>
+        const signer = <span class="cstat-no" title="statement not covered" >new CryptoFactory(context).newSigner(privateKey);</span>
+&nbsp;
+        let transactions = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >        for(let i = 0; i &lt; args.length; i++) {</span>
+            const addr = <span class="cstat-no" title="statement not covered" >args[i].account;</span>
+            const address = <span class="cstat-no" title="statement not covered" >this.calculateAddress(addr);</span>
+            const addresses = <span class="cstat-no" title="statement not covered" >[address];</span>
+&nbsp;
+            const cbor = <span class="cstat-no" title="statement not covered" >require('cbor');</span>
+            const payloadBytes = <span class="cstat-no" title="statement not covered" >cbor.encode(args[i]);</span>
+&nbsp;
+            const transactionHeaderBytes = <span class="cstat-no" title="statement not covered" >protobuf.TransactionHeader.encode({</span>
+                familyName: this.familyName,
+                familyVersion: this.familyVersion,
+                inputs: addresses,
+                outputs: addresses,
+                signerPublicKey: signer.getPublicKey().asHex(),
+                batcherPublicKey: signer.getPublicKey().asHex(),
+                dependencies: [],
+                payloadSha512: createHash('sha512').update(payloadBytes).digest('hex')
+            }).finish();
+&nbsp;
+            const txnSignature = <span class="cstat-no" title="statement not covered" >signer.sign(transactionHeaderBytes);</span>
+            const transaction = <span class="cstat-no" title="statement not covered" >protobuf.Transaction.create({</span>
+                header: transactionHeaderBytes,
+                headerSignature: txnSignature,
+                payload: payloadBytes
+            });
+<span class="cstat-no" title="statement not covered" >            transactions.push(transaction);</span>
+        }
+&nbsp;
+        const batchHeaderBytes = <span class="cstat-no" title="statement not covered" >protobuf.BatchHeader.encode({</span>
+            signerPublicKey: signer.getPublicKey().asHex(),
+            transactionIds: transactions.map(<span class="fstat-no" title="function not covered" >(t</span>xn) =&gt; <span class="cstat-no" title="statement not covered" >txn.headerSignature)</span>,
+        }).finish();
+&nbsp;
+        const batchSignature = <span class="cstat-no" title="statement not covered" >signer.sign(batchHeaderBytes);</span>
+        const batch = <span class="cstat-no" title="statement not covered" >protobuf.Batch.create({</span>
+            header: batchHeaderBytes,
+            headerSignature: batchSignature,
+            transactions: transactions
+        });
+&nbsp;
+        const batchListBytes = <span class="cstat-no" title="statement not covered" >protobuf.BatchList.encode({</span>
+            batches: [batch]
+        }).finish();
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return batchListBytes;</span>
+    }
+&nbsp;
+    /**
+     * Calculate address
+     * @param {*} name address name
+     * @return {String} address
+     */
+<span class="fstat-no" title="function not covered" >    ca</span>lculateAddress(name) {
+        const crypto = <span class="cstat-no" title="statement not covered" >require('crypto');</span>
+        const _hash = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(x</span>) =&gt;</span>
+<span class="cstat-no" title="statement not covered" >            crypto.createHash('sha512').update(x).digest('hex').toLowerCase();</span>
+        const familyNameSpace = <span class="cstat-no" title="statement not covered" >_hash(this.familyName).substring(0, 6);</span>
+        let address = <span class="cstat-no" title="statement not covered" >familyNameSpace + _hash(name).slice(-64);</span>
+<span class="cstat-no" title="statement not covered" >        return address;</span>
+    }
+}
+module.exports = SimpleBatchBuilder;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 03 2019 14:27:05 GMT+0600 (+06)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

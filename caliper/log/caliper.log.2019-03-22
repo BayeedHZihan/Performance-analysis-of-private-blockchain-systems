@@ -1,0 +1,49 @@
+2019-03-22T19:38:14+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-03-22T19:38:14+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-03-22T19:38:15+06:00 - INFO [bench-flow.js]: Executing command: docker-compose -f network/fabric-v1.1/2org1peergoleveldb/docker-compose-tls.yaml up -d;sleep 3s 
+
+2019-03-22T19:38:19+06:00 - INFO [create-channel.js]: Creating mychannel... 
+
+2019-03-22T19:38:22+06:00 - ERROR [create-channel.js]: Failed to create channels: Error: Failed to connect before the deadline
+    at checkState (/home/bayeed/hyperledger/caliper/node_modules/grpc/src/client.js:838:16) 
+
+2019-03-22T19:38:22+06:00 - ERROR [fabric.js]: Fabric initialization failed: Error: Failed to connect before the deadline
+    at checkState (/home/bayeed/hyperledger/caliper/node_modules/grpc/src/client.js:838:16) 
+
+2019-03-22T19:38:22+06:00 - ERROR [bench-flow.js]: Error: Error: Failed to connect before the deadline
+    at checkState (/home/bayeed/hyperledger/caliper/node_modules/grpc/src/client.js:838:16) 
+
+2019-03-22T19:38:22+06:00 - INFO [demo.js]: [Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0 
+
+2019-03-22T19:38:22+06:00 - INFO [bench-flow.js]: Executing command: docker-compose -f network/fabric-v1.1/2org1peergoleveldb/docker-compose-tls.yaml down;docker rm $(docker ps -aq);docker rmi $(docker images dev* -q) 
+
+2019-03-22T19:38:23+06:00 - ERROR [bench-flow.js]: Unsuccessful command execution. Error code: 1. Terminating signal: null 
+
+2019-03-22T19:38:23+06:00 - ERROR [benchmark/simple/main.js]: Error while executing the benchmark: Error: Command failed: docker-compose -f network/fabric-v1.1/2org1peergoleveldb/docker-compose-tls.yaml down;docker rm $(docker ps -aq);docker rmi $(docker images dev* -q)
+Couldn't connect to Docker daemon at http+docker://localhost - is it running?
+
+If it's at a non-standard location, specify the URL with the DOCKER_HOST environment variable.
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.39/containers/json?all=1: dial unix /var/run/docker.sock: connect: permission denied
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.39/images/json?filters=%7B%22reference%22%3A%7B%22dev%2A%22%3Atrue%7D%7D: dial unix /var/run/docker.sock: connect: permission denied
+"docker rmi" requires at least 1 argument.
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+
+    at ChildProcess.exithandler (child_process.js:281:12)
+    at emitTwo (events.js:126:13)
+    at ChildProcess.emit (events.js:214:7)
+    at maybeClose (internal/child_process.js:915:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5) 
+

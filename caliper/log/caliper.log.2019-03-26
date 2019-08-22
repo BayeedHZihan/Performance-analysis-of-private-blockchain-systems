@@ -1,0 +1,22 @@
+2019-03-26T19:15:07+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-03-26T19:15:07+06:00 - ERROR [benchmark/simple/main.js]: file /home/bayeed/hyperledger/caliper/benchmark/simple/network/fabric-v1.2/2org2peergoleveldb/fabric-node.json does not exist 
+
+2019-03-26T19:16:09+06:00 - DEBUG Successfully constructed a winston logger with configurations
+	{"debug":"log/caliper.log","info":"console"}
+
+2019-03-26T19:16:10+06:00 - INFO [bench-flow.js]: ####### Caliper Test ###### 
+
+2019-03-26T19:16:13+06:00 - ERROR [benchmark/simple/main.js]: Error while executing the benchmark: Error: Cannot find module 'fabric-client/lib/EventHub.js'
+    at Function.Module._resolveFilename (module.js:548:15)
+    at Function.Module._load (module.js:475:25)
+    at Module.require (module.js:597:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/home/bayeed/hyperledger/caliper/src/fabric/join-channel.js:23:18)
+    at Module._compile (module.js:653:30)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3) 
+
